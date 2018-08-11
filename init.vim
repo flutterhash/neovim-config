@@ -57,6 +57,8 @@ let mapleader=","
 "
 "Filetypes
 au BufNewFile,BufRead *.gen set filetype=python
+set autoread "always check if the opened file has been modified externally
+au FocusGained * :checktime
 "
 "Indentation
 filetype plugin on "tries to figure out filetype and indent properly
