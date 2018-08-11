@@ -9,3 +9,11 @@
 
 In neovim, execute :PlugUpdate
 To update vim-plug, execute :PlugUpgrade
+
+
+# Optional
+
+## C-Family Language Support
+
+To support C and C++ autocompletion, cquery must be installed somewhere in $PATH.
+Instructions for building from source and configuration are [here](https://github.com/cquery-project/cquery/wiki).

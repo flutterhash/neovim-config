@@ -210,9 +210,20 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 "
 "LanguageClient_neovim
+let cquery_dir = '/tmp/$USER/cquery'
 let g:LanguageClient_serverCommands =
 \{
 \   'rust': ['rustup', 'run', 'nightly', 'rls'],
+\   'c': [
+\       'cquery',
+\       '--log-file='.cquery_dir.'/status.log',
+\       '--init={"cacheDirectory": "'.cquery_dir.'"}'
+\   ],
+\   'cpp': [
+\       'cquery',
+\       '--log-file='.cquery_dir.'/status.log',
+\       '--init={"cacheDirectory": "'.cquery_dir.'"}'
+\   ],
 \}
 "
 "neomake
