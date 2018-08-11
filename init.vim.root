@@ -1,5 +1,5 @@
-let vimdir = $HOME.'.config/nvim'
-let vimcache = vimdir.'/.cache'
+let vim_dir = $HOME.'.config/nvim'
+let cache_dir = vim_dir.'/.cache'
 
 let &packpath = &runtimepath
 colorscheme industry

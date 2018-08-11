@@ -1,7 +1,8 @@
-let vimdir = $HOME.'/.config/nvim'
-let vimcache = vimdir.'/.cache'
+let vim_dir = $HOME.'/.config/nvim'
+let cache_dir = vim_dir.'/.cache'
+let plugin_dir = vim_dir.'/plugins'
 
-call plug#begin('/home/thia/.config/nvim/plugins')
+call plug#begin(plugin_dir)
 " Tim Pope Plugins
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
@@ -176,7 +177,7 @@ let g:ctrlp_show_hidden = 1
 let g:ctrlp_match_window = 'max:50'
 let g:ctrlp_use_caching = 1
 let g:ctrlp_clear_cache_on_exit = 0
-let g:ctrlp_cache_dir = vimcache.'/ctrlp'
+let g:ctrlp_cache_dir = cache_dir.'/ctrlp'
 nnoremap <Leader>p :CtrlP<CR>
 nnoremap <Leader>o :CtrlPBookmarkDir<CR>
 nnoremap <Leader>m :CtrlPMRU<CR>
