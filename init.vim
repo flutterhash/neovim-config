@@ -130,7 +130,7 @@ nnoremap g[ :pop<CR>
 "
 "NumberToggle
 let g:UserNumberToggleTrigger = 1
-let g:NumberToggleTrigger = "<Leader>n"
+let g:NumberToggleTrigger = '<Leader>n'
 "
 "Easymotion
 let g:easymotion_default_mappings = 0
@@ -170,7 +170,7 @@ nnoremap <Leader>m :CtrlPMRU<CR>
 nnoremap <Leader><Leader>p :CtrlPClearAllCaches<CR>
 "
 "Surround.vim
-let g:surround_42="/* \r */"
+let g:surround_42='/* \r */'
 "
 "Rust.vim
 let g:rust_recommended_style = 0
@@ -179,17 +179,16 @@ let g:rust_recommended_style = 0
 let g:clang_format#command = 'clang-format-6.0'
 let g:clang_format#auto_format = 0
 let g:clang_format#code_style = 'llvm'
-let g:clang_format#style_options = {
-    \ "Standard": "Cpp11" }
+let g:clang_format#style_options = {'Standard': 'Cpp11'}
 autocmd FileType c,cpp,objc nnoremap <buffer><Leader><Leader>f :ClangFormat<CR>
 "
 "cargo-fmt
 autocmd FileType rs nnoremap <buffer><Leader><Leader>f :!cargo-fmt
 "
 "ultisnips
-let g:UltiSnipsExpandTrigger="<Leader><tab>"
-let g:UltiSnipsJumpForwardTrigger="<Leader>n"
-let g:UltiSnipsJumpBackwardTrigger="<Leader>b"
+let g:UltiSnipsExpandTrigger = '<Leader><tab>'
+let g:UltiSnipsJumpForwardTrigger = '<Leader>n'
+let g:UltiSnipsJumpBackwardTrigger = '<Leader>b'
 "
 "ncm
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
@@ -200,5 +199,6 @@ let g:LanguageClient_serverCommands =
 \{
 \   'rust': ['rustup', 'run', 'nightly', 'rls'],
 \}
+"
 "neomake
 "call neomake#configure#automake('w')
