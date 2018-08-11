@@ -22,11 +22,24 @@ Plug 'Valloric/vim-operator-highlight'
 " Development Plugins
 Plug 'Valloric/ListToggle'
 Plug 'vim-scripts/a.vim'
-Plug 'honza/vim-snippets'
 Plug 'rhysd/vim-clang-format'
 Plug 'rust-lang/rust.vim'
 Plug 'cespare/vim-toml'
-Plug 'SirVer/ultisnips'
+Plug 'neomake/neomake'
+"Plug 'SirVer/ultisnips'
+"Plug 'honza/vim-snippets'
+" Neovim Completion Manager Plugins
+Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
+Plug 'ncm2/ncm2-bufword'
+Plug 'ncm2/ncm2-path'
+Plug 'ncm2/ncm2-tmux'
+Plug 'ncm2/ncm2-jedi'
+Plug 'autozimu/LanguageClient-neovim',
+\{
+\   'branch': 'next',
+\   'do': 'bash install.sh',
+\}
 call plug#end()
 
 let &packpath = &runtimepath
@@ -85,7 +98,7 @@ set hlsearch "highlight matches on-screen when searching
 set incsearch "incremental search: searching works as you type
 "
 "Text Autocompletion
-set completeopt-=preview
+set completeopt=noinsert,menuone,noselect
 "
 "Status Line
 set statusline=%t\ %m%=%l,%c\ %P
@@ -191,6 +204,7 @@ let g:UltiSnipsJumpForwardTrigger = '<Leader>n'
 let g:UltiSnipsJumpBackwardTrigger = '<Leader>b'
 "
 "ncm
+autocmd BufEnter * call ncm2#enable_for_buffer()
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 "
@@ -201,4 +215,4 @@ let g:LanguageClient_serverCommands =
 \}
 "
 "neomake
-"call neomake#configure#automake('w')
+call neomake#configure#automake('w')
