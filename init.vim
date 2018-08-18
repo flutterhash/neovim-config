@@ -39,7 +39,7 @@ Plug 'ncm2/ncm2-jedi'
 Plug 'autozimu/LanguageClient-neovim',
 \{
 \   'branch': 'next',
-\   'do': 'bash install.sh',
+\   'do': 'bash make release',
 \}
 call plug#end()
 
