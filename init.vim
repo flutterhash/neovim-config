@@ -197,7 +197,7 @@ let g:clang_format#style_options = {'Standard': 'Cpp11'}
 autocmd FileType c,cpp,objc nnoremap <buffer><Leader><Leader>f :ClangFormat<CR>
 "
 "cargo-fmt
-autocmd FileType rs nnoremap <buffer><Leader><Leader>f :!cargo-fmt
+autocmd FileType rs nnoremap <buffer><Leader><Leader>f :!cargo-fmt<CR>
 "
 "ultisnips
 let g:UltiSnipsExpandTrigger = '<Leader><tab>'
@@ -211,6 +211,7 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 "
 "LanguageClient_neovim
 let cquery_dir = '/tmp/$USER/cquery'
+nnoremap <Leader>h :call LanguageClient_contextMenu()<CR>
 let g:LanguageClient_serverCommands =
 \{
 \   'rust': ['rustup', 'run', 'nightly', 'rls'],
