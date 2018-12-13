@@ -203,7 +203,7 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 "
 "LanguageClient_neovim
 let cquery_dir = '/tmp/'.$USER.'/cquery'
-nnoremap <Leader>h :call LanguageClient_contextMenu()<CR>
+nnoremap <Leader>d :call LanguageClient_contextMenu()<CR>
 let g:LanguageClient_serverCommands =
 \{
 \   'rust': ['rustup', 'run', 'nightly', 'rls'],
