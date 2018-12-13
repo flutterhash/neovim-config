@@ -67,12 +67,9 @@ set gdefault "by default, replace all instances
 set splitbelow
 set splitright
 syntax on
-let mapleader=","
-"
-"Filetypes
-au BufNewFile,BufRead *.gen set filetype=python
 set autoread "always check if the opened file has been modified externally
-au FocusGained * :checktime
+autocmd FocusGained * :checktime
+let mapleader=","
 "
 "Indentation
 filetype plugin on "tries to figure out filetype and indent properly
