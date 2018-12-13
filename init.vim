@@ -24,7 +24,6 @@ Plug 'Valloric/vim-operator-highlight'
 " Development Plugins
 Plug 'Valloric/ListToggle'
 Plug 'vim-scripts/a.vim'
-Plug 'rhysd/vim-clang-format'
 Plug 'rust-lang/rust.vim'
 Plug 'cespare/vim-toml'
 Plug 'neomake/neomake'
@@ -191,15 +190,6 @@ let g:surround_42='/* \r */'
 "Rust.vim
 let g:rust_recommended_style = 0
 "
-"clang-format
-let g:clang_format#command = 'clang-format-6.0'
-let g:clang_format#auto_format = 0
-let g:clang_format#code_style = 'llvm'
-let g:clang_format#style_options = {'Standard': 'Cpp11'}
-autocmd FileType c,cpp,objc nnoremap <buffer><Leader><Leader>f :ClangFormat<CR>
-"
-"cargo-fmt
-autocmd FileType rs nnoremap <buffer><Leader><Leader>f :!cargo-fmt<CR>
 "
 "ultisnips
 let g:UltiSnipsExpandTrigger = '<Leader><tab>'
