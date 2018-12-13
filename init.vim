@@ -187,6 +187,9 @@ let g:surround_42='/* \r */'
 "Rust.vim
 let g:rust_recommended_style = 0
 "
+"Rust CTags support
+autocmd BufRead *.rs :setlocal tags=./rusty-tags.vi;/
+autocmd BufWritePost *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" . expand('%:p:h') . "&" | redraw!
 "
 "ultisnips
 let g:UltiSnipsExpandTrigger = '<Leader><tab>'
