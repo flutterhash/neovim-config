@@ -10,6 +10,7 @@ Plug 'tpope/vim-commentary'
 " General Usability Plugins
 Plug 'Lokaltog/vim-easymotion'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'cloudhead/neovim-fuzzy'
 Plug 'fholgado/minibufexpl.vim'
 Plug 'xolox/vim-misc'
 " Indentation Plugins
@@ -167,7 +168,7 @@ nnoremap <Leader><Leader>n :enew<CR>
 nnoremap <A-Right> :MBEbn<CR>
 nnoremap <A-Left> :MBEbp<CR>
 "
-"Ctrl-P (Fuzzy finder + MRU)
+"Ctrl-P (Fuzzy finder + MRU) + neovim-fuzzy
 let g:ctrlp_map = ''
 let g:ctrlp_cmd = ''
 let g:ctrlp_mruf_max = 100
@@ -176,9 +177,10 @@ let g:ctrlp_max_files = 0
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_match_window = 'max:50'
 let g:ctrlp_use_caching = 1
-let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_clear_cache_on_exit = 1
 let g:ctrlp_cache_dir = cache_dir.'/ctrlp'
-nnoremap <Leader>p :CtrlP<CR>
+nnoremap <Leader>x :CtrlPTag<CR>
+nnoremap <Leader>p :FuzzyOpen<CR>
 nnoremap <Leader>o :CtrlPBookmarkDir<CR>
 nnoremap <Leader>m :CtrlPMRU<CR>
 nnoremap <Leader><Leader>p :CtrlPClearAllCaches<CR>
