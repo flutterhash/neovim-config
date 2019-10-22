@@ -26,6 +26,8 @@ Plug 'vim-scripts/a.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'cespare/vim-toml'
 Plug 'neomake/neomake'
+Plug 'majutsushi/tagbar'
+Plug 'mfulz/cscope.nvim'
 "Plug 'SirVer/ultisnips'
 "Plug 'honza/vim-snippets'
 " Neovim Completion Manager Plugins
@@ -174,6 +176,7 @@ let g:ctrlp_match_window = 'max:50'
 let g:ctrlp_use_caching = 1
 let g:ctrlp_clear_cache_on_exit = 1
 let g:ctrlp_cache_dir = cache_dir.'/ctrlp'
+nnoremap <Leader>z :Tagbar<CR>
 nnoremap <Leader>x :CtrlPTag<CR>
 nnoremap <Leader>p :FuzzyOpen<CR>
 nnoremap <Leader>o :CtrlPBookmarkDir<CR>
