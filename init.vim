@@ -122,7 +122,7 @@ nnoremap <C-Right> <C-W>l
 nnoremap <Leader>v  <C-W>v
 nnoremap <Leader>s  <C-W>s
 nnoremap <Leader>=  <C-W>=
-nnoremap <Leader>c  <C-W>c
+nnoremap <Leader><Leader>c  <C-W>c
 nnoremap <Leader>H  <C-W>H
 nnoremap <Leader>J  <C-W>J
 nnoremap <Leader>K  <C-W>K
@@ -158,7 +158,7 @@ map <Plug>(easymotion-prefix)g <Plug>(easymotion-F)
 "
 "MiniBufExplorer
 nnoremap <Leader><Leader>b :MBEToggle<CR>
-nnoremap <Leader>z :MBEbw<CR>
+nnoremap <Leader><Leader>z :MBEbw<CR>
 nnoremap <Leader><Leader>n :enew<CR>
 nnoremap <A-Right> :MBEbn<CR>
 nnoremap <A-Left> :MBEbp<CR>
