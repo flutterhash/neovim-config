@@ -12,7 +12,6 @@ Plug 'Lokaltog/vim-easymotion'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'cloudhead/neovim-fuzzy'
 Plug 'fholgado/minibufexpl.vim'
-Plug 'xolox/vim-misc'
 " Indentation Plugins
 Plug 'ciaranm/detectindent'
 Plug 'nathanaelkane/vim-indent-guides'
