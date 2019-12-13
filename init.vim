@@ -129,6 +129,8 @@ nnoremap <Leader>H  <C-W>H
 nnoremap <Leader>J  <C-W>J
 nnoremap <Leader>K  <C-W>K
 nnoremap <Leader>L  <C-W>L
+"Make terminal mode behave more like insert mode
+tnoremap <expr> <C-r> '<C-\><C-N>"'.nr2char(getchar()).'pi'
 "Tab Manipulation
 nnoremap <Leader>t :tabnew<CR>
 nnoremap <Leader>T :tabclose<CR>
