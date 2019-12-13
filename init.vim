@@ -46,6 +46,7 @@ call plug#end()
 
 let &packpath = &runtimepath
 colorscheme twilight256
+highlight DiffText guibg=#1a1a1a ctermfg=Red guifg=Red
 
 set nocompatible "to use these cool features!
 set nomodeline "security
