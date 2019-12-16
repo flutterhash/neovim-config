@@ -25,9 +25,9 @@ Plug 'Valloric/ListToggle'
 Plug 'vim-scripts/a.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'cespare/vim-toml'
-Plug 'neomake/neomake'
 Plug 'majutsushi/tagbar'
 Plug 'mfulz/cscope.nvim'
+"Plug 'neomake/neomake'
 "Plug 'SirVer/ultisnips'
 "Plug 'honza/vim-snippets'
 " Neovim Completion Manager Plugins
@@ -226,4 +226,15 @@ let g:LanguageClient_serverCommands =
 \}
 "
 "neomake
-call neomake#configure#automake('w')
+" call neomake#configure#automake('w')
+let g:neomake_python_enabled_makers = [
+\{
+\   'args': [plugin_dir.'/neomake/autoload/neomake/makers/ft/python/compile.py'],
+\   'auto_enabled': 1,
+\   'errorformat': '%E%f:%l:%c: %m',
+\   'exe': 'python3',
+\   'output_stream': 'stdout',
+\   'serialize': 1,
+\   'serialize_abort_on_error': 1,
+\}
+\]
