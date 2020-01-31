@@ -42,6 +42,7 @@ Plug 'autozimu/LanguageClient-neovim',
 \   'branch': 'next',
 \   'do': 'bash make release',
 \}
+Plug 'junegunn/fzf', { 'dir': plugin_dir.'/fzf', 'do': './install --bin' }
 call plug#end()
 
 let &packpath = &runtimepath
