@@ -183,6 +183,7 @@ let g:ctrlp_cache_dir = cache_dir.'/ctrlp'
 nnoremap <Leader>z :TagbarOpenAutoClose<CR>
 nnoremap <Leader>x :CtrlPTag<CR>
 nnoremap <Leader><Leader>r :FuzzyGrep<CR>
+nnoremap <Leader><Leader>k :FuzzyKill<CR>
 nnoremap <Leader>p :FuzzyOpen<CR>
 nnoremap <Leader>o :CtrlPBookmarkDir<CR>
 nnoremap <Leader>m :CtrlPMRU<CR>
