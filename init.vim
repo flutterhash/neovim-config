@@ -180,7 +180,7 @@ let g:ctrlp_match_window = 'max:50'
 let g:ctrlp_use_caching = 1
 let g:ctrlp_clear_cache_on_exit = 1
 let g:ctrlp_cache_dir = cache_dir.'/ctrlp'
-nnoremap <Leader>z :Tagbar<CR>
+nnoremap <Leader>z :TagbarOpenAutoClose<CR>
 nnoremap <Leader>x :CtrlPTag<CR>
 nnoremap <Leader><Leader>r :FuzzyGrep<CR>
 nnoremap <Leader>p :FuzzyOpen<CR>
