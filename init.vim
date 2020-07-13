@@ -239,3 +239,6 @@ let g:neomake_python_enabled_makers = [
 \   'serialize_abort_on_error': 1,
 \}
 \]
+"cscope
+set csre
+nnoremap <Leader>c :cscope find g <c-r>=expand("<cword>")<CR><CR>
