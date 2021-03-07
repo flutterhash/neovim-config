@@ -1,8 +1,14 @@
-let vim_dir = $HOME.'.config/nvim'
+function Mkdir_permissive(dir)
+    silent execute '!mkdir -p '.a:dir.' > /dev/null 2>&1'
+endfunction
+
+let vim_dir = $HOME.'/.config/nvim'
 let cache_dir = vim_dir.'/.cache'
+call Mkdir_permissive(cache_dir)
 
 let &packpath = &runtimepath
-colorscheme industry
+colorscheme twilight256
+highlight DiffText guibg=#1a1a1a ctermfg=Red guifg=Red
 
 set nocompatible "to use these cool features!
 set nomodeline "security
