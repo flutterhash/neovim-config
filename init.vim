@@ -1,6 +1,12 @@
+function Mkdir_permissive(dir)
+    silent execute '!mkdir -p '.a:dir.' > /dev/null 2>&1'
+endfunction
+
 let vim_dir = $HOME.'/.config/nvim'
 let cache_dir = vim_dir.'/.cache'
 let plugin_dir = vim_dir.'/plugins'
+call Mkdir_permissive(cache_dir)
+call Mkdir_permissive(plugin_dir)
 
 call plug#begin(plugin_dir)
 " Tim Pope Plugins
@@ -210,20 +216,21 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 "
 "LanguageClient_neovim
-let cquery_dir = '/tmp/'.$USER.'/cquery'
+let ccls_dir = '/tmp/'.$USER.'/ccls'
+call Mkdir_permissive(ccls_dir)
 nnoremap <Leader>d :call LanguageClient_contextMenu()<CR>
 let g:LanguageClient_serverCommands =
 \{
 \   'rust': ['rustup', 'run', 'nightly', 'rls'],
 \   'c': [
-\       'cquery',
-\       '--log-file='.cquery_dir.'/status.log',
-\       '--init={"cacheDirectory": "'.cquery_dir.'"}'
+\       'ccls',
+\       '--log-file='.ccls_dir.'/status.log',
+"\       '--init={"cacheDirectory": "'.ccls_dir.'"}'
 \   ],
 \   'cpp': [
-\       'cquery',
-\       '--log-file='.cquery_dir.'/status.log',
-\       '--init={"cacheDirectory": "'.cquery_dir.'"}'
+\       'ccls',
+\       '--log-file='.ccls_dir.'/status.log',
+"\       '--init={"cacheDirectory": "'.ccls_dir.'"}'
 \   ],
 \}
 "
