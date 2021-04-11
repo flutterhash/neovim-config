@@ -229,12 +229,12 @@ let g:LanguageClient_serverCommands =
 \   'c': [
 \       'ccls',
 \       '--log-file='.ccls_dir.'/status.log',
-"\       '--init={"cacheDirectory": "'.ccls_dir.'"}'
+\       '--init={"cacheDirectory": "'.ccls_dir.'"}'
 \   ],
 \   'cpp': [
 \       'ccls',
 \       '--log-file='.ccls_dir.'/status.log',
-"\       '--init={"cacheDirectory": "'.ccls_dir.'"}'
+\       '--init={"cacheDirectory": "'.ccls_dir.'"}'
 \   ],
 \}
 "
