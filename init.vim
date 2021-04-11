@@ -221,7 +221,8 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 "LanguageClient_neovim
 let ccls_dir = '/tmp/'.$USER.'/ccls'
 call Mkdir_permissive(ccls_dir)
-nnoremap <Leader>d :call LanguageClient_contextMenu()<CR>
+nnoremap <Leader>d :call LanguageClient_textDocument_hover()<CR>
+nnoremap <Leader><Leader>d :call LanguageClient_contextMenu()<CR>
 let g:LanguageClient_serverCommands =
 \{
 \   'rust': ['rustup', 'run', 'nightly', 'rls'],
